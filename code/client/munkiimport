@@ -82,7 +82,7 @@ def make_dmg(pkgpath):
         output = proc.stdout.readline()
         if not output and (proc.poll() != None):
             break
-        print output.rstrip('\n').decode('UTF-8')
+        output.rstrip('\n').decode('UTF-8')
         sys.stdout.flush()
     retcode = proc.poll()
     if retcode:
